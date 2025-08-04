@@ -5,14 +5,22 @@ import { getCollection } from "astro:content";
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
 
-const { items = [] }: { items: { label: string; href: string }[] } = Astro.props;
+const items = [
+  { label: "Start", href: "/" },
+  { label: "Projekty graficzne", href: "/grafika" },
+  { label: "Fotografia", href: "/zdjecia" },
+  { label: "Wideo", href: "/wideo" },
+];
 
 const baseClasses = {
-  nav: "nav-links flex w-full justify-center gap-6 max-md:gap-3 max-md:py-6",
+  nav: "flex w-full justify-center gap-6 max-md:gap-3 max-md:py-6",
   link:
-    "px-3 py-2 text-base font-semibold transition-colors rounded-md hover:text-mint-400 dark:hover:text-mint-300 max-md:mx-auto max-md:w-full max-md:px-6 max-md:py-3",
+    "px-3 py-2 text-base font-semibold rounded-md transition-colors duration-300 ease-in-out " +
+    "hover:text-mint-400 dark:hover:text-mint-300 " +
+    "max-md:mx-auto max-md:w-full max-md:px-6 max-md:py-3",
   activeLink:
-    "text-mint-500 dark:text-mint-400 font-bold [text-shadow:1px_1px_11px_rgba(208,251,229,0.7)]",
+    "text-mint-500 dark:text-mint-400 font-bold " +
+    "[text-shadow:1px_1px_11px_rgba(208,251,229,0.7)]",
   inactiveLink: "text-blacktext dark:text-zinc-300",
   socialContainer: "flex items-center justify-center gap-5 md:hidden",
 };
@@ -20,7 +28,6 @@ const baseClasses = {
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // Classes for link states
     const linkClasses = {
       active: baseClasses.activeLink.split(" "),
       inactive: baseClasses.inactiveLink.split(" "),
