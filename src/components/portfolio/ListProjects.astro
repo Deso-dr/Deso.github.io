@@ -1,41 +1,66 @@
----
-title: "Moje teledyski"
----
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moje Filmy</title>
+  <style>
+    body {
+      background-color: #121212; /* ciemne tło, żeby białe nagłówki były widoczne */
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-<h1>Moje ulubione teledyski</h1>
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      max-width: 560px; /* ograniczamy szerokość */
+      width: 100%;
+    }
 
-<section>
-  <h2>Kobi - Kiedy wyjdę z piekła</h2>
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/V53drEIr-Nk" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</section>
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      color: white;
+    }
 
-<section>
-  <h2>Kobi - Lustro</h2>
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/K8o8Tt3CUdU" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</section>
+    iframe {
+      width: 100%;
+      height: 315px; /* proporcje 16:9 */
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
 
-<section>
-  <h2>Kobi - Nie ma to tamto</h2>
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/dvA3Ej0AZho" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</section>
+  <div class="video-container">
+    <h2 class="title">Mój pierwszy kawałek</h2>
+    <iframe
+      src="https://www.youtube.com/embed/ID_FILMU_1"
+      title="YouTube video player"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <div class="video-container">
+    <h2 class="title">Mój drugi kawałek</h2>
+    <iframe
+      src="https://www.youtube.com/embed/ID_FILMU_2"
+      title="YouTube video player"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+  </div>
+
+</body>
+</html>
