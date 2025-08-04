@@ -6,7 +6,7 @@
   <title>Moje Filmy</title>
   <style>
     body {
-      background-color: #121212; /* ciemne tło */
+      background-color: #121212;
       font-family: Arial, sans-serif;
       margin: 2rem;
       color: white;
@@ -20,30 +20,51 @@
       flex-direction: column;
       align-items: center;
       margin-bottom: 3rem;
-      max-width: 560px; /* szerokość iframe */
+      max-width: 560px;
       width: 100%;
     }
 
     .title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.1;
       color: white;
+      text-align: center;
+      margin-bottom: 0.8rem;
     }
 
     iframe {
       width: 100%;
-      height: 315px; /* proporcje 16:9 */
+      height: 315px;
       border: none;
       border-radius: 8px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 1024px) {
+      .title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 1.25rem;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="video-container">
-    <h2 class="title">Kobi Lustro</h2>
+    <h1 class="title">Hubert Serafin – Kobi Lustro 👋</h1>
     <iframe
       src="https://www.youtube.com/embed/K8o8Tt3CUdU"
       title="YouTube video player"
@@ -53,7 +74,7 @@
   </div>
 
   <div class="video-container">
-    <h2 class="title">Kobi Kiedy wyjdę z piekła</h2>
+    <h1 class="title">Hubert Serafin – Kobi Kiedy wyjdę z piekła 👋</h1>
     <iframe
       src="https://www.youtube.com/embed/V53drEIr-Nk"
       title="YouTube video player"
