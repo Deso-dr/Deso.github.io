@@ -26,6 +26,12 @@ const baseClasses = {
 };
 ---
 
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const linkClasses = {
@@ -51,7 +57,6 @@ const baseClasses = {
 
       document.querySelectorAll("nav a").forEach((link) => {
         const path = link.getAttribute("data-path");
-        // Aktywny, gdy link to pełna ścieżka albo link do sekcji na stronie głównej
         if (path === currentPath || path === currentPath + currentHash) {
           toggleLinkClasses(link, true);
         } else {
@@ -62,7 +67,6 @@ const baseClasses = {
 
     updateActiveLink();
 
-    // Update active link on hash change (np. kliknięcie wideo)
     window.addEventListener("hashchange", updateActiveLink);
   });
 </script>
