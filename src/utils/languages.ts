@@ -110,8 +110,34 @@ export const languages: Record<string, Language> = {
     name: "Python",
     iconName: "python",
   },
+  // Dodane Adobe:
+  premier: {
+    name: "Premiere Pro",
+    iconName: "premier",
+    className: "bg-[#9999FF]",
+  },
+  after: {
+    name: "After Effects",
+    iconName: "after",
+    className: "bg-[#9999FF]",
+  },
+  illustator: {
+    name: "Illustrator",
+    iconName: "illustator",
+    className: "bg-[#FF9A00]",
+  },
+  photoshop: {
+    name: "Photoshop",
+    iconName: "photoshop",
+    className: "bg-[#31A8FF]",
+  },
+  lightroom: {
+    name: "Lightroom",
+    iconName: "lightroom",
+    className: "bg-[#61D5F8]",
+  },
 };
 
 export const getLanguage = (lang: string): Language => {
   return languages[lang] || languages.html;
-}; 
+};
