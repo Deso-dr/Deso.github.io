@@ -112,7 +112,7 @@ export const languages: Record<string, Language> = {
   },
   // Dodane Adobe:
   premier: {
-    name: "Premiere Pro",
+    name: "Premier Pro",
     iconName: "premier",
     className: "bg-[#9999FF]",
   },
@@ -122,12 +122,12 @@ export const languages: Record<string, Language> = {
     className: "bg-[#9999FF]",
   },
   illustator: {
-    name: "Illustrator",
+    name: "Adobe Illustator",
     iconName: "illustator",
     className: "bg-[#FF9A00]",
   },
   photoshop: {
-    name: "Photoshop",
+    name: "Adobe  Photoshop",
     iconName: "photoshop",
     className: "bg-[#31A8FF]",
   },
