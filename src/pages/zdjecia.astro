@@ -1,13 +1,45 @@
 ---
-// src/pages/projects.astro
+import Layout from "../layouts/Layout.astro";
 ---
-<html lang="en">
-  <head>
-    <title>My Projects</title>
-    <meta charset="UTF-8" />
-  </head>
-  <body class="text-white bg-black p-10">
-    <h1 class="text-4xl font-bold mb-4">Moje projekty</h1>
-    <p>Tu znajdą się wszystkie moje projekty, zdjęcia, filmy itp.</p>
-  </body>
-</html>
+
+<Layout pageTitle="Zdjęcia" description="Moje portfolio fotograficzne">
+  <main class="px-6 py-12 max-w-7xl mx-auto space-y-16">
+
+    <section>
+      <h2 class="text-3xl font-bold text-mint-500 mb-6">Auta</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="/images/auta1.jpg" alt="Auta 1" class="rounded-xl shadow-lg" />
+        <img src="/images/auta2.jpg" alt="Auta 2" class="rounded-xl shadow-lg" />
+        <img src="/images/auta3.jpg" alt="Auta 3" class="rounded-xl shadow-lg" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold text-mint-500 mb-6">Komercyjne</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="/images/komercyjne1.jpg" alt="Komercyjne 1" class="rounded-xl shadow-lg" />
+        <img src="/images/komercyjne2.jpg" alt="Komercyjne 2" class="rounded-xl shadow-lg" />
+        <img src="/images/komercyjne3.jpg" alt="Komercyjne 3" class="rounded-xl shadow-lg" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold text-mint-500 mb-6">Imprezy</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="/images/imprezy1.jpg" alt="Impreza 1" class="rounded-xl shadow-lg" />
+        <img src="/images/imprezy2.jpg" alt="Impreza 2" class="rounded-xl shadow-lg" />
+        <img src="/images/imprezy3.jpg" alt="Impreza 3" class="rounded-xl shadow-lg" />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold text-mint-500 mb-6">Portrety</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="/images/portret1.jpg" alt="Portret 1" class="rounded-xl shadow-lg" />
+        <img src="/images/portret2.jpg" alt="Portret 2" class="rounded-xl shadow-lg" />
+        <img src="/images/portret3.jpg" alt="Portret 3" class="rounded-xl shadow-lg" />
+      </div>
+    </section>
+
+  </main>
+</Layout>
